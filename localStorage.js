@@ -2,7 +2,7 @@
 
 const form = document.getElementById('userForm');
 
-form.addEventListener('onClick', function (event)
+form.addEventListener(onsubmit, function (event)
 {
     event.preventDefault();
 
