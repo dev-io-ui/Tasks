@@ -1,3 +1,8 @@
+// Write your code below:
+// Write your code below:
+// Write your code below:
+
+
 function handleFormSubmit(event) {
 
     event.preventDefault();
@@ -17,5 +22,13 @@ function handleFormSubmit(event) {
 
     localStorage.setItem(obj.email, JSON.stringify(obj));
 
-    
+    display(obj)
 };
+
+function display(obj) {
+    const ele = document.getElementById('listOfItem');
+    ele.innerHTML = ele.innerHTML + `<li> ${obj.username} - ${obj.email} - ${obj.phone} </li>`
+}
+
+module.exports = handleFormSubmit
+
