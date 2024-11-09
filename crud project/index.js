@@ -1,5 +1,5 @@
 window.onload = function () {
-    display(); 
+    display();
 };
 
 function handleFormSubmit(event) {
@@ -16,7 +16,7 @@ function handleFormSubmit(event) {
         catagary: catagary
     };
 
-    axios.post("https://crudcrud.com/api/959dfdab38d74f7aba51a3f0fe800d0e/E-Com", obj)
+    axios.post("https://crudcrud.com/api/6aca4774e3d14ce3a5ca7c173c8c79ad/E-Com", obj)
         .then((res) => {
             console.log(res);
             display();
@@ -30,11 +30,14 @@ function handleFormSubmit(event) {
 function display() {
     const categories = ['electronics', 'sports', 'food', 'all'];
 
-    axios.get("https://crudcrud.com/api/959dfdab38d74f7aba51a3f0fe800d0e/E-Com")
+    axios.get("https://crudcrud.com/api/6aca4774e3d14ce3a5ca7c173c8c79ad/E-Com")
         .then((response) => {
             categories.forEach((category) => {
                 const ele = document.getElementById(category);
                 if (ele) {
+
+                    ele.innerHTML = "";
+
                     for (let i = 0; i < response.data.length; i++) {
                         const item = response.data[i];
 
@@ -62,10 +65,10 @@ function display() {
 }
 
 function deleteProduct(id) {
-    axios.delete(`https://crudcrud.com/api/959dfdab38d74f7aba51a3f0fe800d0e/E-Com/${id}`)
+    axios.delete(`https://crudcrud.com/api/6aca4774e3d14ce3a5ca7c173c8c79ad/E-Com/${id}`)
         .then((res) => {
             console.log(res);
-            
+            display();
         }).catch((err) => {
             console.log(err);
         });
