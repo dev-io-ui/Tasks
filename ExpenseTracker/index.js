@@ -60,11 +60,3 @@ function display(obj) {
     ele.appendChild(listItem);
 }
 
-// // Load stored users when the page loads
-// function loadStoredUsers() {
-//     const storedUsers = Object.keys(localStorage).map(key => JSON.parse(localStorage.getItem(key)));
-//     storedUsers.forEach(user => display(user));
-// }
-
-// // Load stored users on page load
-// window.onload = loadStoredUsers;
