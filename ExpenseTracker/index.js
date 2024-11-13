@@ -16,7 +16,7 @@ function handleFormSubmit(event) {
     localStorage.setItem(obj.name, JSON.stringify(obj));
     display(obj);
 
-    event.target.reset(); // Reset the form fields
+    event.target.reset();
 }
 
 function display(obj) {
