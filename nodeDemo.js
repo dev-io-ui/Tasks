@@ -1,2 +1,4 @@
-console.log("Hello World");
-console.log("Node starts");
+
+const fs = require('fs');
+
+fs.writeFileSync('hello.txt','hello node js');
